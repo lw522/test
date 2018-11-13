@@ -1,0 +1,8 @@
+hisat2 -x ../ref/yeast_hisat2_index/yeast_hisat2_index -U SRR1916152.fastq | samtools view -bS - | samtools sort - -o EV_strain3.sort.bam
+htseq-count EV_strain3.sort.bam ../ref/Saccharomyces_cerevisiae.R64-1-1.94.gtf > EV_strain3.count.tab
+samtools index EV_strain3.sort.bam # 当有了这个bam的索引文件后，就可以进行图形化显示了
+
+ python gener_cmd_hisat2.py ../SraAccList.txt> detail_cmd_hisat2.sh
+samtools view -bS EV_strain3.sam -o EV_strain3.bam 
+samtools sort EV_strain3.bam -o EV_strain3.sort.bam
+

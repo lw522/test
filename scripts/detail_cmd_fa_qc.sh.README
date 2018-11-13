@@ -1,0 +1,1 @@
+python gener_cmd_sratofa_fqc.py ../SraAccList.txt > detail_cmd_fa_qc.sh

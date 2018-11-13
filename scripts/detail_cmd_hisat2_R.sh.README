@@ -1,0 +1,1 @@
+python gener_cmd_hisat_R.py ../SraAccList_sample.txt ../ref/yeast_hisat2_index/ ../data > detail_cmd_hisat2_R.sh
